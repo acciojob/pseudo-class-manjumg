@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Special Text Layout</title>
 </head>
+<style>
+  #container {
+    margin: 20px;
+    position: relative; /* Ensure the pseudo-elements are positioned relative to this container */
+}
 
+#container::before {
+    content: "Main";
+    color: #f00; /* Red color */
+    font-size: 20px; /* Font size of 20px */
+    position: absolute; /* Position it absolutely relative to the container */
+    top: -30px; /* Adjust as needed to position before the container */
+    left: 0; /* Align to the left */
+}
+
+#container::after {
+    content: "here";
+    color: #f00; /* Red color */
+    font-size: 20px; /* Font size of 20px */
+    position: absolute; /* Position it absolutely relative to the container */
+    bottom: -30px; /* Adjust as needed to position after the container */
+    left: 0; /* Align to the left */
+}
+
+</style>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <div id="container">
+        Main content goes here.
+    </div>
 </body>
-
 </html>
