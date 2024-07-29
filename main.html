@@ -3,37 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Elements</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Special Text Layout</title>
 </head>
 <style>
   #container {
     margin: 20px;
-    position: relative; /* Ensure the pseudo-elements are positioned relative to this container */
+    padding: 10px; /* Optional: adds padding inside the container */
+    border: 1px solid #000; /* Optional: adds a border to visualize the container */
+    position: relative; /* Ensure pseudo-elements are positioned correctly */
 }
 
-#container::before {
-    content: "Main";
-    color: #f00; /* Red color */
-    font-size: 20px; /* Font size of 20px */
-    position: absolute; /* Position it absolutely relative to the container */
-    top: -30px; /* Adjust as needed to position before the container */
-    left: 0; /* Align to the left */
-}
-
-#container::after {
-    content: "here";
-    color: #f00; /* Red color */
-    font-size: 20px; /* Font size of 20px */
-    position: absolute; /* Position it absolutely relative to the container */
-    bottom: -30px; /* Adjust as needed to position after the container */
-    left: 0; /* Align to the left */
+.highlight {
+    color: #f00; /* Red color for the text */
+    font-size: 20px; /* Font size */
 }
 
 </style>
 <body>
     <div id="container">
-        Main content goes here.
+        <span class="highlight">Main</span> content of the <span class="highlight">container</span>
     </div>
 </body>
 </html>
